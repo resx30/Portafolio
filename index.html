@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luisa | Portafolio Profesional</title>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+</body>
+  
+  <!-- Cabecera -->
+  <header class="main-header">
+    <div class="header-left">Luisa</div>
+    <nav class="nav">
+      <a href="index.html">Sobre mí</a>
+      <a href="habilidades.html">Habilidades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  
+    <div class="header-right">
+  <button class="icon-button" aria-label="Buscar">
+    <i data-feather="search"></i>
+  </button>
+  <button id="theme-toggle" class="icon-button" aria-label="Modo oscuro">
+  <span id="theme-icon" data-feather="sun"></span>
+</button>
+</div>
+  </header>
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <section class="hero" id="about">
+        <div class="name-block">
+      <h1 class="name-line">LUISA</h1>
+      <h1 class="name-line">CALLE</h1>
+      <h1 class="name-line">RESTREPO</h1>
+      </div>
+      <img src="img/avatar.png" alt="Avatar de Luisa" class="avatar" />
+      
+  </section>
+
+</main>
+
+
+<!-- Sección de columnas -->
+ <section class="main-section">
+  <!-- Columna Izquierda -->
+  <div class="content-left">
+    <article class="post">
+      <h2>Sobre mí</h2>
+      <a >Hitos importantes</a>
+      <ul class="hitos">
+         <li>
+            <img src="img/computadora.svg" alt="compu" class="icono">
+            Actualmente estudiando desarrollo frontend. Enfocada en HTML, CSS, JavaScript y fundamentos de React. </li>
+         <li>
+            <img src="img/navegador (1).svg" alt="navegador" class="icono2">
+            Puedo maquetar sitios web responsivos, aplicar animaciones básicas y estructurar código limpio con buenas 
+            prácticas.</li>
+        <li>
+            <img src="img/bulbo.svg" alt="bombi" class="icono3">
+            Trabajando actualmente en mi portafolio personal, mejoranod diseño responsivo y accesibilidad.</li>
+        <li>
+            <img src="img/siguiendo.svg" alt="megu" class="icono4">
+            Me gusta crear interfaces limpias, funcionales y que transmitan profesionalismo. </li>
+      </ul>
+    </article>
+
+    <article class="post">
+      <h2>Mi forma de crear soluciones digitales</h2>
+      <a >Desarrollo con propósito</a>
+      <p>Me gusta abordar cada proyecto con atención al detalle y enfoque en la experiencia del usuario. 
+        Creo en la importancia de un diseño bien pensado y un desarrollo limpio que se adapten a diferentes
+        dispositivos y necesidades. Para mí, una buena solución digital no solo funciona bien, sino que
+        también se siente intuitiva y está construida con intención.</p>
+    </article>
+
+     <section class="personal-intereses">
+    <h2>Intereses Personales</h2>
+    <p>Más allá del mundo digital, disfruto de actividades que permiten desconectarme y nutrir mi creatividad. </p>
+    <div class="intereses-grid"></div>
+      <div class="intereses-item">
+        <i class="fas fa-camera-retro"></i>
+        <h3>Escuchar música</h3>
+        <p>Me relaja y motiva. La música es una fuente constante de inspiración para mí.</p>
+      </div>
+      <div class="intereses-item">
+        <i class="fa-camera-retro"></i>
+        <h3>Diseño creativo</h3>
+        <p>Me encanta explorar combinaciones de colores y estilos para reflejar creatividad en todo lo que hago.</p>
+      </div>
+       <div class="intereses-item">
+        <i class="fa-camera-retro"></i>
+        <h3>Conocer lugares</h3>
+        <p>Me gusta conocer sitios nuevos, especialmente aquellos con historia y cultura para descubrir.</p>
+
+  </section>
+  </div>
+
+  <!-- Columna Derecha -->
+  <aside class="content-right">
+    <h3>EXPLORAR HABILIDADES</h3><br>
+    <div class="botones-categorias">
+      <button class="btn-cat active">CSS</button>
+      <button class="btn-cat">JavaScript</button> 
+      <button class="btn-cat">UI/UX</button>
+      <button class="btn-cat">React</button>
+    </div>
+
+    <section class="flip-section">
+    <h3 class="titulo-seccion">COSAS QUE ME GUSTA CREAR</h3><br>
+    <div class="flip-container">
+
+      <!---Tarjeta 1--->
+
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h4>Interfaces Modernas</h4>
+          </div>
+          <div class="flip-back">
+            <p>Creo interfaces modernas, limpias y atractivas enfocadas en una buena experiencia de usuario.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!--Tarjeta 2-->
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <h4>Desarrollo Web</h4>
+          </div>
+          <div class="flip-back">
+            <p>Desarrollo páginas web responsivas con diseños tipo e-commerce y animaciones en CSS.</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+  // Espera a que el DOM esté listo
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a[href]");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const target = link.getAttribute("href");
+
+        // Solo animar navegación dentro del mismo dominio
+        if (target && !target.startsWith("http")) {
+          e.preventDefault(); // Detiene la navegación inmediata
+
+          // Agrega clase fade-out al body
+          document.body.classList.add("fade-out");
+
+          // Espera a que termine la animación y luego navega
+          setTimeout(() => {
+            window.location.href = target;
+          }, 500); // Coincide con el tiempo del transition
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,375 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, hwb(200 56% 7%), white);
+  color: #111;
+  transition: background 0.3s, color 0.3s;
+  background-color: white;
+}
+
+/* Cabecera */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 32px;
+  background: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.main-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /*Desenfoque*/
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #0077cc;
+}
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: inherit;
+  
+}
+.icon-button:hover {
+  transform: scale(1.1);
+}
+
+
+/* Sección de contacto */
+.contacto-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+body.modo-oscuro .contacto-section {
+  background: #2c2c2c;
+}
+
+/* Encabezados */
+.contacto-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contacto-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Formulario */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contacto-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: #50bde2;
+}
+
+/* Botón de enviar */
+.contacto-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #50bde2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contacto-form button:hover {
+  transform: scale(1.05);
+  background-color: #009ecb;
+  transition: all 0.3s ease;
+}
+
+/* Modo oscuro para inputs y botón */
+body.modo-oscuro .contacto-form input,
+body.modo-oscuro .contacto-form textarea {
+  background-color: #000000;
+  color: white;
+  border: 1px solid #666;
+}
+
+body.modo-oscuro .contacto-form label {
+  color: #f1f1f1;
+}
+
+body.modo-oscuro .contacto-form button {
+  background-color: #50bde2;
+  color: #1c1c1c;
+}
+
+
+/* -------- Modo oscuro -------- */
+body.dark-mode {
+  background: #121212;
+  color: #eaeaea;
+}
+
+.main-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /*Desenfoque*/
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #eaeaea;
+}
+body.dark-mode .main-header {
+  background: transparent;
+}
+body.dark-mode .nav a,
+body.dark-mode .icon-button {
+  color: #eaeaea;
+}
+
+.about-info-section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #000000;
+  background-color: white;
+}
+
+body.dark .about-info-section {
+  color: #eee;
+}
+
+
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #0077cc;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: inherit;
+  
+}
+.icon-button:hover {
+  transform: scale(1.1);
+}
+
+/* Contenido principal */
+.main-content {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: calc(100vh - 120px);
+}
+
+/* Tarjeta del formulario */
+.contact-section {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-section:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #ec407a;
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  background-color: #ec407a;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #d81b60;
+  transform: translateY(-3px);
+}
+
+.contact-form button:active {
+  transform: scale(0.97);
+}
+
+/* Modo oscuro contacto */
+body.dark-mode .contact-section {
+  background: rgba(40, 40, 40, 0.75);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: rgba(60, 60, 60, 0.85);
+  color: #f3f4f6;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  background: rgba(60, 60, 60, 1);
+}
+
+body.dark-mode .contacto-form button {
+  background-color: #45caff;
+  color: #f3f4f6;
+}
+
+body.dark-mode .contacto-section h2 {
+  color: #000000;
+}
+
+/* Animación entrada suave */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de desvanecimiento */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
